@@ -1,7 +1,8 @@
+//顶部导航栏
 window.onload=function () {
     let shopping=document.querySelectorAll(".shop");
     let bag=document.querySelector(".bag");
-    console.log(shopping,bag);
+    // console.log(shopping,bag);
     for (let i=0;i<shopping.length;i++) {
         shopping[i].onclick=function () {
             let status=getComputedStyle(bag,null).display;
@@ -12,11 +13,11 @@ window.onload=function () {
             }
         }
     }
-
+    //广告隐藏 top减少
     window.onscroll=function () {
         let navs=document.querySelectorAll("nav");
         let scrollHeight=document.body.scrollTop||document.documentElement.scrollTop;
-        console.log(navs,scrollHeight);
+        // console.log(navs,scrollHeight);
         if (scrollHeight<100) {
             bag.style.top="88px";
         }else {
@@ -34,6 +35,7 @@ window.onload=function () {
             }
         }
     }
+    //底部标签
     let meau=document.querySelector(".meau");
     let meaubox=document.querySelector(".meaubox");
     let cuohao=document.querySelector(".cuohao");
@@ -42,7 +44,7 @@ window.onload=function () {
  
     meau.onclick=function () {
         meaubox.style.height="100%";
-        body.style.overflow="hidden";
+        // body.style.overflow="hidden";
     }
     cuohao.onclick=function () {
         meaubox.style.height="0";
